@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <title>Practicas en CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <ul class="ul">
+            <li class="li">Acordeon</li>
+            <li class="li">Carrousel</li>
+            <li class="li">LightBox</li>
+            <li class="li">Buscador</li>
+           <!-- <li class="li">Flip-Card</li>
+            <li class="li">Modal</li>-->
+        </ul>
+        <div class="subcontenedor">
+            <div class="bloque">    
+                <div class="acordeon">
+                    <div class="fila">
+                        <h2 class="h2">Titulo I</h2>
+                        <p class="contenido">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam atque numquam assumenda.</p>
+                    </div>
+                </div>
+                <div class="acordeon">
+                    <div class="fila">
+                        <h2 class="h2">Titulo II</h2>
+                        <p class="contenido">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptas libero sunt beatae iusto officiis illum nesciunt ratione, dicta dolor?.<p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bloque">
+                <div class="carrousel">
+                    <div class="grande">
+                        <img src="./flork/francesito.png" alt="img-1" class="img">
+                        <img src="./flork/Justicia.png" alt="img-2" class="img">
+                    </div>
+                    <ul class="puntos">
+                        <li class="punto activo"></li>
+                        <li class="punto"></li>
+                    </ul>            
+                </div>
+            </div>
+
+            <div class="bloque">        
+                <ul class="u-l">
+                    <li class="l-i">
+                        <a href="#" class="a" title="flork-educado">
+                            <img src="/flork/educado.png" alt="flork-educado" class="img">
+                        </a>
+                    </li>
+
+                    <li class="l-i">
+                        <a href="#" class="a" title="flork-francesito">
+                            <img src="/flork/francesito.png" alt="flork-francesito" class="img">
+                        </a>
+                    </li>
+
+                    <li class="l-i">
+                        <a href="#" class="a" title="flork-justicia">
+                            <img src="flork/Justicia.png" alt="flork-justicia" class="img" >
+                        </a>
+                    </li>
+                </ul>
+                <div class="lightBox">
+                    <button class="cerrar">Cerrar</button>
+                    <img src="" alt="" class="big">
+                </div>
+            </div>
+
+            <div class="bloque">
+                <div class="container">
+                    <div class="buscador">
+                        <h1 class="h1">Buscador</h1>
+                        <input type="text" class="formulario">
+                        <button class="button-form">Buscar</button>
+                    </div> 
+                    <div class="items">
+                        <h2 class="h2">Frutas</h2>
+                        <ul class="frutas"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bloque">
+                <div class="card">
+                    <div class="front">
+                        A
+                    </div>
+                    <div class="back">
+                        B
+                    </div>
+                </div>
+            </div>
+           <!-- <div class="bloque">
+                <div class="modal cerrar">
+                    <h2 class="h2-modal">Modal</h2>
+                    <p class="p-modal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, temporibus.</p>
+                    <ul class="ul-modal">
+                        <li class="li-modal-aceptar" id="li">Aceptar</li>
+                        <li class="li-modal-cerrar" id="li">Cerrar</li>
+                    </ul>
+                </div>
+            </div>-->
+        </div>
+    </div>
+
+    <script src="carrousel.js"></script>
+    <script src="app.js"></script>
+    <script src="acordeon.js"></script>
+    <script src="lightBox.js"></script>
+    <script src="buscador.js"></script>
+    <script src="modal.js"></script>
+</body>
+</html>

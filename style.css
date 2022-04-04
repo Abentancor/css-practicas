@@ -1,0 +1,384 @@
+:root{
+    --primaryColor:rgb(42, 101, 116);
+    --secondaryColor:rgb(16, 40, 46);
+
+}
+
+
+
+*{
+    font-family: 'Roboto', sans-serif;;
+    padding: 0;
+    margin: 0;
+    margin-top: 1em;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(78, 255, 255);
+    height: 90vh;
+    width: 90%;
+    max-width: 120em;
+    padding: 1em;
+    margin: 1em 0 0 1em;
+    border-radius: 30px;
+    box-shadow: 0 1px 1em;
+    z-index: 99;
+}
+.contenedor .ul{
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.contenedor .li{
+    background-color: var(--primaryColor);
+    color: beige;
+    padding: 0.5em;
+    margin: 0 1em 0 0;
+    border-radius: 10px;
+    
+}
+.contenedor .li:hover{
+    background-color: var(--secondaryColor);
+    transition: all .5s ease;
+}
+.contenedor .li.activo{
+    background-color: var(--secondaryColor);
+}
+
+.contenedor .subcontenedor{
+    width: 100%;
+    min-height: 10vh;
+    position: relative;
+}
+.contenedor .bloque{
+    margin: 1em;
+    position: absolute;
+    width: auto;
+    z-index: 0;
+    opacity: 0;
+    transform: translatey(50%);
+    transition: all .5s ease;
+}
+.contenedor .bloque.activo{
+    z-index: 1;
+    opacity: 1;
+    transform: translatey(0%);
+}
+
+/*************************************Acordeon***************************************/
+
+.acordeon{
+    background-color: beige;
+    border-radius: 20px;
+    width: 100%;
+    padding: .5em;
+    box-shadow: 0 1px 1em;
+}
+.acordeon .fila{
+    background-color:var(--secondaryColor);
+    border-radius: 20px;
+    padding: 1px;
+    margin: 1px;
+}
+.acordeon .h2{
+    text-align: center;
+    background-color: beige;
+    border-radius: 10px;
+    margin:1em;
+}
+.acordeon .h2:hover{
+    background-color: var(--primaryColor);
+    color: beige;
+}
+.acordeon .contenido{
+    color: beige;
+    text-align: center;
+    border-radius: 10px;
+    margin: 1px;
+    padding: 0px;
+    height: 0em;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+.acordeon .fila.activo .contenido{
+    height: 4em;
+}
+
+
+
+/************************Carrousel**********************************/
+
+
+.carrousel{
+    background-color: var(--primaryColor);
+    width: 90%;
+    margin: 1em;
+    border-radius: 20px;
+    padding: 1em;
+    
+    overflow: hidden;
+}
+.carrousel .grande{
+    width: 200%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+
+    transition: all 0.5s ease;
+    transform: translateX(0%);
+}
+.carrousel .img{
+    width: calc(100%/2 -2em);
+    min-height: 10vh;
+    transition: all .5 ease;
+    border-radius: 10px;
+}
+
+.carrousel .puntos{
+    background-color: beige;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.carrousel .punto{
+    width: 2em;
+    height: 2em;
+    margin: 1em;
+    background-color: var(--primaryColor);
+    border-radius: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.carrousel .punto.activo {
+    background-color: var(--secondaryColor);
+  }
+.carrousel .punto:hover {
+    background-color: var(--secondaryColor);
+}
+
+
+/**********************LightBox***********************/
+
+.u-l{
+    list-style-type: none;
+    width: 90%;
+    background-color: var(--primaryColor);
+    border-radius: 20px;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+.u-l .l-i{
+overflow: hidden;
+border-radius: 1em;
+}
+.link{
+    outline: none;
+    text-decoration: none;
+    color: beige;
+}
+.u-l .img{
+ border-radius: 1em;
+ height: 35vh;
+ transition: all .5 ease;
+ transform: scale(1.5);
+}
+.u-l .l-i:hover .img{
+    transform: scale(1);
+    border-radius: 1em;
+}
+
+.lightBox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    background-color: var(--primaryColor);
+    border-radius: 20px;
+    padding-bottom: 1em;
+
+    display: none;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    z-index: 2;
+
+}
+
+.lightBox.activo{
+    display: flex;
+}
+
+.lightBox .cerrar{
+    background-color: var(--primaryColor);
+    color: beige;
+    padding: 0.5em;
+    margin: 0 1em 0 0;
+    border-radius: 10px;
+
+}
+.lightBox .cerrar:hover{
+    background-color: var(--secondaryColor);
+}
+.lightBox .big{
+    width: 80%;
+    height: 70vh;
+    border-radius: 20px;
+}
+
+/***************************Buscador***********************/
+.container{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-gap: 2em;
+}
+
+.buscador{
+    max-height: 50%;
+    min-height: 50%;
+    margin: 2em;
+    padding: 1em;
+    border-radius: 20px;
+    color: beige;
+    background-color: var(--primaryColor);
+    width: 90%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.buscador .formulario{
+    width: 90%;
+    margin: 1em;
+    border-radius: 10px;
+    height: 2em;
+    padding: .5em;
+    background-color: beige;
+    
+}
+
+.buscador .button-form{
+    background-color: var(--primaryColor);
+    color: beige;
+    padding: 0.5em;
+    margin: 1em 1em 0 0;
+    border-radius: 10px;
+}
+.buscador .button-form:hover{
+    background-color: var(--secondaryColor);
+}
+
+
+.items{
+    background-color: beige;
+    width: 100%;
+    padding: .5em;
+    margin: .5em;
+    border-radius: 20px;
+    min-height: 10vh;
+}
+.items .h2{
+    color: beige;
+    background-color: var(--primaryColor);
+    text-align: center;
+    border-radius: 10px;
+}
+.items .frutas{
+    list-style-type: none;
+    background-color: var(--primaryColor);
+    border-radius: 20px;
+    padding: 1em;
+    color: beige;
+    display: flex;
+    flex-flow: column wrap;
+    min-height: 250px;
+}
+.items .fruta{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+
+
+/********************Flip-Card********************/
+
+
+.card{
+    width: 200px;
+    height: 300px;
+    position: relative;
+}
+
+.card .front{
+    width: 100%;
+    height: 100%;
+    background-color: var(--primaryColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/**************Modal*****************/
+
+.modal{
+    background-color: var(--primaryColor);
+    color: beige;
+    border-radius: 10px;
+    padding: 0 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5em;
+    padding: 1em;
+    width: 250px;
+}
+.modal .h2-modal{
+    grid-column: span 2;
+    text-align: center;
+}
+.modal .p-modal{
+    grid-column: span 2;
+    flex-wrap: wrap;
+    font-weight: bolder;
+}
+.modal .ul-modal{
+    grid-column: span 1/-1;
+}
+.modal .li-modal-aceptar{
+    list-style-type: none;
+    background-color: var(--secondaryColor);
+    border-radius: 10px;
+    padding: .5em;
+
+}
+.modal .li-modal-cerrar{
+    list-style-type: none;
+    background-color: rgb(204, 15, 15);
+    border-radius: 10px;
+    padding: .5em;
+
+}
+.modal .li-modal-aceptar:hover{
+    background-color: rgb(19, 71, 85);
+}
+.modal .li-modal-cerrar:hover{
+    background-color: rgb(255, 0, 0);
+}
+
+.modal.cerrar{
+    z-index: 0;
+}
